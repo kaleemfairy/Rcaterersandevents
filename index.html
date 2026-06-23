@@ -10,6 +10,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- EmailJS SDK — connects contact form to kaleemfairy@gmail.com -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            /*
+             * SETUP STEPS (one-time, takes 5 minutes):
+             * 1. Sign up free at https://www.emailjs.com
+             * 2. Add Gmail as a service → copy your Service ID
+             * 3. Create an email template → copy your Template ID
+             * 4. Go to Account → copy your Public Key
+             * 5. Replace the three placeholders below
+             */
+            emailjs.init({ publicKey: 'YOUR_PUBLIC_KEY' });
+        })();
+    </script>
 </head>
 <body>
 
@@ -26,6 +41,7 @@
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#menu" class="nav-link">Menu</a></li>
                 <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
                 <li><a href="#contact" class="btn btn-nav">Book Now</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -395,6 +411,144 @@
         </div>
     </section>
 
+    <!-- ===== VIDEO REVIEWS ===== -->
+    <!--
+        HOW TO ADD YOUR VIDEOS:
+        1. Upload your videos to YouTube (free) at youtube.com
+        2. Copy the video ID — it's the part after "v=" in the URL
+           Example: youtube.com/watch?v=dQw4w9WgXcQ  →  ID is "dQw4w9WgXcQ"
+        3. Replace every PROMO_VIDEO_ID / REVIEW_1_ID / REVIEW_2_ID / REVIEW_3_ID below
+
+        FOR INSTAGRAM INSTEAD:
+        - On any Instagram post, tap ··· → Copy Link
+        - Paste the link as data-ig-url on the card (see comments below)
+    -->
+    <section id="videos" class="section video-reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Watch &amp; Trust</span>
+                <h2>Our Work in Action</h2>
+                <p>Watch our promotional video and hear real reviews from happy clients — direct from our Instagram.</p>
+            </div>
+
+            <!-- ── Featured Promotional Video ── -->
+            <div class="promo-video-wrap reveal">
+                <div class="promo-label"><i class="fas fa-film"></i> Promotional Video</div>
+                <!-- Replace PROMO_VIDEO_ID with your YouTube video ID -->
+                <div class="yt-lazy" data-vid="PROMO_VIDEO_ID" role="button" tabindex="0" aria-label="Play promotional video">
+                    <img
+                        class="yt-thumb"
+                        src="https://img.youtube.com/vi/PROMO_VIDEO_ID/maxresdefault.jpg"
+                        alt="R Caterers &amp; Events — Promotional Video"
+                        loading="lazy"
+                        onerror="this.src='https://img.youtube.com/vi/PROMO_VIDEO_ID/hqdefault.jpg'"
+                    >
+                    <div class="yt-play-btn" aria-hidden="true">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="yt-label">Watch Our Story</span>
+                </div>
+            </div>
+
+            <!-- ── Customer Review Videos ── -->
+            <div class="rv-header">
+                <h3>Customer Video Reviews</h3>
+                <!-- Replace YOUR_INSTAGRAM_HANDLE with your actual handle e.g. rcaterersandevents -->
+                <a href="https://www.instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="ig-follow-btn">
+                    <i class="fab fa-instagram"></i> Follow Us on Instagram
+                </a>
+            </div>
+
+            <div class="review-videos-grid">
+
+                <!-- Review Card 1 — replace REVIEW_1_ID with YouTube video ID -->
+                <div class="rv-card reveal" data-vid="REVIEW_1_ID">
+                    <div class="yt-lazy sm" data-vid="REVIEW_1_ID" role="button" tabindex="0" aria-label="Play customer review video">
+                        <img
+                            class="yt-thumb"
+                            src="https://img.youtube.com/vi/REVIEW_1_ID/hqdefault.jpg"
+                            alt="Customer review video 1"
+                            loading="lazy"
+                        >
+                        <div class="yt-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="rv-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Incredible food, flawless service at our wedding!"</p>
+                        <span>— Sarah &amp; Ahmed</span>
+                        <a href="https://www.instagram.com/p/INSTAGRAM_POST_ID_1/" target="_blank" rel="noopener" class="ig-post-link"><i class="fab fa-instagram"></i> View on Instagram</a>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 — replace REVIEW_2_ID with YouTube video ID -->
+                <div class="rv-card reveal" data-vid="REVIEW_2_ID">
+                    <div class="yt-lazy sm" data-vid="REVIEW_2_ID" role="button" tabindex="0" aria-label="Play customer review video">
+                        <img
+                            class="yt-thumb"
+                            src="https://img.youtube.com/vi/REVIEW_2_ID/hqdefault.jpg"
+                            alt="Customer review video 2"
+                            loading="lazy"
+                        >
+                        <div class="yt-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="rv-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Best corporate event catering we've ever had. Every guest was impressed!"</p>
+                        <span>— Mohammed K., TechCorp</span>
+                        <a href="https://www.instagram.com/p/INSTAGRAM_POST_ID_2/" target="_blank" rel="noopener" class="ig-post-link"><i class="fab fa-instagram"></i> View on Instagram</a>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 — replace REVIEW_3_ID with YouTube video ID -->
+                <div class="rv-card reveal" data-vid="REVIEW_3_ID">
+                    <div class="yt-lazy sm" data-vid="REVIEW_3_ID" role="button" tabindex="0" aria-label="Play customer review video">
+                        <img
+                            class="yt-thumb"
+                            src="https://img.youtube.com/vi/REVIEW_3_ID/hqdefault.jpg"
+                            alt="Customer review video 3"
+                            loading="lazy"
+                        >
+                        <div class="yt-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="rv-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"My daughter's birthday was perfect from start to finish. Highly recommend!"</p>
+                        <span>— Priya R.</span>
+                        <a href="https://www.instagram.com/p/INSTAGRAM_POST_ID_3/" target="_blank" rel="noopener" class="ig-post-link"><i class="fab fa-instagram"></i> View on Instagram</a>
+                    </div>
+                </div>
+
+            </div><!-- /review-videos-grid -->
+
+            <!-- Instagram CTA Banner -->
+            <div class="ig-cta-banner reveal">
+                <div class="ig-cta-text">
+                    <i class="fab fa-instagram"></i>
+                    <div>
+                        <strong>See more on Instagram</strong>
+                        <p>We post event highlights, behind-the-scenes, and customer reviews regularly.</p>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fab fa-instagram"></i> Follow @rcaterersandevents
+                </a>
+            </div>
+        </div>
+
+        <!-- Video Modal -->
+        <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Video player">
+            <button class="vm-close" id="vm-close" aria-label="Close video"><i class="fas fa-times"></i></button>
+            <div class="vm-inner">
+                <div class="vm-frame-wrap">
+                    <iframe id="vm-iframe" src="" title="Video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== HOW IT WORKS ===== -->
     <section class="section how-section">
         <div class="container">
@@ -462,7 +616,10 @@
                     </div>
                 </div>
 
-                <form class="contact-form reveal" id="contact-form" novalidate>
+                <!-- data-service and data-template: fill in from your EmailJS dashboard -->
+                <form class="contact-form reveal" id="contact-form" novalidate
+                      data-service="YOUR_SERVICE_ID"
+                      data-template="YOUR_TEMPLATE_ID">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name *</label>

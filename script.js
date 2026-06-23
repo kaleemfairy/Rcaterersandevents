@@ -217,25 +217,60 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
     });
 
-    /* ── Contact form ── */
+    /* ── Contact form → EmailJS → kaleemfairy@gmail.com ── */
     const form       = document.getElementById('contact-form');
     const successMsg = document.getElementById('form-success');
 
     form.addEventListener('submit', e => {
         e.preventDefault();
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
-        const btn = form.querySelector('button[type="submit"]');
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        const btn       = form.querySelector('button[type="submit"]');
+        const serviceId  = form.dataset.service;
+        const templateId = form.dataset.template;
+
         btn.disabled = true;
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
 
-        setTimeout(() => {
-            btn.style.display = 'none';
-            successMsg.classList.add('visible');
-            form.reset();
-        }, 1400);
+        emailjs.sendForm(serviceId, templateId, form)
+            .then(() => {
+                btn.style.display = 'none';
+                successMsg.classList.add('visible');
+                form.reset();
+            })
+            .catch(() => {
+                btn.disabled = false;
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Enquiry';
+                alert('Oops — something went wrong. Please call us directly or try again.');
+            });
+    });
+
+    /* ── Video modal (thumbnail-first click-to-play) ── */
+    const videoModal = document.getElementById('video-modal');
+    const vmIframe   = document.getElementById('vm-iframe');
+    const vmClose    = document.getElementById('vm-close');
+
+    function openVideo(videoId) {
+        vmIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        videoModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideo() {
+        vmIframe.src = '';
+        videoModal.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.yt-lazy').forEach(el => {
+        el.addEventListener('click', () => openVideo(el.dataset.vid));
+        el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openVideo(el.dataset.vid); });
+    });
+
+    vmClose.addEventListener('click', closeVideo);
+    videoModal.addEventListener('click', e => { if (e.target === videoModal) closeVideo(); });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && videoModal.classList.contains('open')) closeVideo();
     });
 
     /* ── Back to top ── */
