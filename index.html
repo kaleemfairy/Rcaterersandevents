@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="R Caterers & Events — Premium catering and event management services for weddings, corporate events, and private parties.">
+    <title>R Caterers &amp; Events | Making Every Moment Memorable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- EmailJS SDK — connects contact form to kaleemfairy@gmail.com -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        (function(){
+            /* EmailJS connected to kaleemfairy@gmail.com */
+            emailjs.init({ publicKey: 'HX9E7Bh8fW_Kp9Pyd' });
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-r">R</span>
+                <span class="logo-text">Caterers <span class="amp">&amp;</span> Events</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#contact" class="btn btn-nav">Book Now</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-eyebrow">Premium Catering &amp; Event Services</span>
+            <h1>Making Every<br><em>Moment</em> Memorable</h1>
+            <p class="hero-sub">From intimate gatherings to grand celebrations — we craft unforgettable experiences with exceptional food and flawless service.</p>
+            <div class="hero-btns">
+                <a href="#gallery" class="btn btn-primary">View Our Work</a>
+                <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
+            </div>
+        </div>
+        <a href="#services" class="hero-scroll" aria-label="Scroll down">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </a>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">What We Do</span>
+                <h2>Our Services</h2>
+                <p>We bring passion, precision, and professionalism to every event we serve.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-ring"></i></div>
+                        <h3>Wedding Catering</h3>
+                        <p>Your perfect day deserves perfect food. Elegant multi-course menus, live cooking stations, and beautifully styled tablescapes.</p>
+                        <a href="#contact" class="link-arrow">Plan Your Wedding <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>Corporate Events</h3>
+                        <p>From breakfast meetings to gala dinners, we handle corporate catering with professionalism and menus tailored to your culture.</p>
+                        <a href="#contact" class="link-arrow">Plan Your Event <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-birthday-cake"></i></div>
+                        <h3>Private Parties</h3>
+                        <p>Birthdays, anniversaries, baby showers — whatever the celebration, we bring the feast with custom menus and themed setups.</p>
+                        <a href="#contact" class="link-arrow">Plan Your Party <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=600&q=80')"></div>
+                    <div class="service-body">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
+                        <h3>Social Gatherings</h3>
+                        <p>Community events, religious gatherings, cultural celebrations — we serve diverse cuisines with warmth and respect for every tradition.</p>
+                        <a href="#contact" class="link-arrow">Plan Your Gathering <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats-section">
+        <div class="stats-bg"></div>
+        <div class="stats-overlay"></div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat reveal">
+                    <span class="stat-num" data-target="15">0</span><span class="stat-suf">+</span>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-num" data-target="2500">0</span><span class="stat-suf">+</span>
+                    <p>Events Hosted</p>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-num" data-target="50">0</span><span class="stat-suf">+</span>
+                    <p>Cuisines Offered</p>
+                </div>
+                <div class="stat reveal">
+                    <span class="stat-num" data-target="98">0</span><span class="stat-suf">%</span>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Our Portfolio</span>
+                <h2>Recent Events</h2>
+                <p>A glimpse into the beautiful moments we've helped create.</p>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="corporate">Corporate</button>
+                <button class="filter-btn" data-filter="food">Food</button>
+                <button class="filter-btn" data-filter="party">Parties</button>
+            </div>
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item reveal" data-cat="wedding">
+                    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80" alt="Elegant wedding reception setup" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Elegant Wedding Reception</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="food">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=700&q=80" alt="Gourmet fine dining" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Gourmet Fine Dining</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="corporate">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=700&q=80" alt="Corporate gala dinner" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Corporate Gala Dinner</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="food">
+                    <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=700&q=80" alt="Buffet spread setup" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Buffet Spread Setup</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="party">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=700&q=80" alt="Birthday celebration" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Birthday Celebration</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="wedding">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=700&q=80" alt="Wedding banquet table" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Wedding Banquet Table</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="food">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=700&q=80" alt="Dessert station" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Dessert Station</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="corporate">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=700&q=80" alt="Executive lunch setup" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Executive Lunch Setup</span></div>
+                </div>
+                <div class="gallery-item reveal" data-cat="party">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=700&q=80" alt="Cocktail reception" loading="lazy">
+                    <div class="gallery-hover"><i class="fas fa-expand-alt"></i><span>Cocktail Reception</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lb-close" id="lb-close" aria-label="Close"><i class="fas fa-times"></i></button>
+        <button class="lb-prev"  id="lb-prev"  aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+        <button class="lb-next"  id="lb-next"  aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        <div class="lb-inner">
+            <img id="lb-img" src="" alt="">
+            <p id="lb-cap"></p>
+        </div>
+    </div>
+
+    <!-- ===== MENU ===== -->
+    <section id="menu" class="section menu-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Culinary Excellence</span>
+                <h2>Menu Highlights</h2>
+                <p>Crafted with the finest ingredients, inspired by global flavours.</p>
+            </div>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-tab="starters">Starters</button>
+                <button class="tab-btn" data-tab="mains">Main Course</button>
+                <button class="tab-btn" data-tab="desserts">Desserts</button>
+                <button class="tab-btn" data-tab="beverages">Beverages</button>
+            </div>
+
+            <div class="tab-panel active" id="tab-starters">
+                <div class="menu-grid">
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Bruschetta Platter</h4><span class="badge veg">Veg</span></div>
+                            <p>Toasted ciabatta with fresh tomatoes, basil, garlic, and extra virgin olive oil.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Chicken Satay Skewers</h4><span class="badge nonveg">Non-Veg</span></div>
+                            <p>Marinated chicken skewers grilled to perfection, served with peanut dipping sauce.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Vegetable Spring Rolls</h4><span class="badge veg">Veg</span></div>
+                            <p>Crispy rolls filled with seasonal vegetables and glass noodles, with sweet chilli sauce.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Prawn Cocktail</h4><span class="badge sea">Seafood</span></div>
+                            <p>Chilled jumbo prawns with classic Marie Rose sauce on a bed of crisp lettuce.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab-mains">
+                <div class="menu-grid">
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Grilled Lamb Chops</h4><span class="badge nonveg">Non-Veg</span></div>
+                            <p>Herb-marinated lamb chops grilled to order, served with rosemary jus and roasted vegetables.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Mushroom Risotto</h4><span class="badge veg">Veg</span></div>
+                            <p>Creamy Arborio rice with wild mushrooms, truffle oil, and Parmesan shavings.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Butter Chicken</h4><span class="badge nonveg">Non-Veg</span></div>
+                            <p>Tender chicken in a rich tomato-butter sauce, served with fragrant basmati rice and naan.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Vegetable Biryani</h4><span class="badge veg">Veg</span></div>
+                            <p>Fragrant long-grain rice layered with spiced vegetables, saffron, and crispy onions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab-desserts">
+                <div class="menu-grid">
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Chocolate Fondant</h4><span class="badge veg">Veg</span></div>
+                            <p>Warm dark chocolate cake with a molten centre, served with vanilla bean ice cream.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Tiramisu</h4><span class="badge veg">Veg</span></div>
+                            <p>Classic Italian dessert with coffee-soaked ladyfingers, mascarpone, and dusted cocoa.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Gulab Jamun</h4><span class="badge veg">Veg</span></div>
+                            <p>Soft milk dumplings soaked in rose-flavoured sugar syrup, served warm with cream.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Fruit Pavlova</h4><span class="badge veg">Veg</span></div>
+                            <p>Crisp meringue base topped with whipped cream and a medley of fresh seasonal fruits.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-panel" id="tab-beverages">
+                <div class="menu-grid">
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Signature Mocktails</h4><span class="badge veg">Non-Alcoholic</span></div>
+                            <p>Creative house blends: Mango Sunrise, Berry Splash, and Lychee Fizz.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Cold Brew Coffee</h4><span class="badge veg">Hot / Iced</span></div>
+                            <p>Smooth, slow-steeped cold brew or classic hot espresso-based drinks made to order.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Infused Water Station</h4><span class="badge veg">Refreshing</span></div>
+                            <p>Cucumber-mint, strawberry-basil, and lemon-ginger infused waters.</p>
+                        </div>
+                    </div>
+                    <div class="menu-card reveal">
+                        <div class="menu-img" style="background-image:url('https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=400&q=80')"></div>
+                        <div class="menu-body">
+                            <div class="menu-head"><h4>Masala Chai</h4><span class="badge veg">Traditional</span></div>
+                            <p>Aromatic spiced tea brewed with ginger, cardamom, and cinnamon — a crowd favourite.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-cta reveal">
+                <p>Want a custom menu for your event?</p>
+                <a href="#contact" class="btn btn-primary">Request Full Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials" class="section testimonials-section">
+        <div class="t-bg"></div>
+        <div class="t-overlay"></div>
+        <div class="container">
+            <div class="section-header light">
+                <span class="eyebrow">Client Love</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="carousel" id="carousel">
+                <div class="carousel-track" id="carousel-track">
+                    <div class="t-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"R Caterers made our wedding day absolutely magical. The food was outstanding and every guest complimented the spread. Truly world-class service!"</p>
+                        <div class="t-author"><div class="avatar">SA</div><div><strong>Sarah &amp; Ahmed</strong><span>Wedding Reception, 2024</span></div></div>
+                    </div>
+                    <div class="t-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"We hired R Caterers for our annual company gala. Seamless setup, impeccable presentation, and the food was absolutely delicious. Will definitely use again!"</p>
+                        <div class="t-author"><div class="avatar">MK</div><div><strong>Mohammed Khan</strong><span>Corporate Gala, TechCorp Ltd</span></div></div>
+                    </div>
+                    <div class="t-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"My daughter's birthday party was a dream come true. The setup was stunning, the food amazing, and the staff so warm and professional throughout."</p>
+                        <div class="t-author"><div class="avatar">PR</div><div><strong>Priya Rajan</strong><span>Private Birthday Party, 2024</span></div></div>
+                    </div>
+                    <div class="t-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        <p>"Exceptional quality and value. They catered for 300 guests at our community event — not a single complaint. The biryani and dessert station were crowd favourites!"</p>
+                        <div class="t-author"><div class="avatar">JO</div><div><strong>James Okonkwo</strong><span>Community Event, 2023</span></div></div>
+                    </div>
+                    <div class="t-card">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Very specific dietary requirements for our event — vegan, gluten-free, halal — and R Caterers handled everything perfectly. Beautifully presented throughout."</p>
+                        <div class="t-author"><div class="avatar">LS</div><div><strong>Lisa Singh</strong><span>Charity Gala Dinner, 2024</span></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="c-btn" id="c-prev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+                <div class="c-dots" id="c-dots"></div>
+                <button class="c-btn" id="c-next" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== VIDEO REVIEWS ===== -->
+    <!--
+        HOW TO ADD YOUR VIDEOS:
+        1. Upload your videos to YouTube (free) at youtube.com
+        2. Copy the video ID — it's the part after "v=" in the URL
+           Example: youtube.com/watch?v=dQw4w9WgXcQ  →  ID is "dQw4w9WgXcQ"
+        3. Replace every PROMO_VIDEO_ID / REVIEW_1_ID / REVIEW_2_ID / REVIEW_3_ID below
+
+        FOR INSTAGRAM INSTEAD:
+        - On any Instagram post, tap ··· → Copy Link
+        - Paste the link as data-ig-url on the card (see comments below)
+    -->
+    <section id="videos" class="section video-reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Watch &amp; Trust</span>
+                <h2>Our Work in Action</h2>
+                <p>Watch our promotional video and hear real reviews from happy clients — direct from our Instagram.</p>
+            </div>
+
+            <!-- ── Featured Promotional Video ── -->
+            <div class="promo-video-wrap reveal">
+                <div class="promo-label"><i class="fas fa-film"></i> Promotional Video</div>
+                <!-- Replace PROMO_VIDEO_ID with your YouTube video ID -->
+                <div class="yt-lazy" data-vid="PROMO_VIDEO_ID" role="button" tabindex="0" aria-label="Play promotional video">
+                    <img
+                        class="yt-thumb"
+                        src="https://img.youtube.com/vi/PROMO_VIDEO_ID/maxresdefault.jpg"
+                        alt="R Caterers &amp; Events — Promotional Video"
+                        loading="lazy"
+                        onerror="this.src='https://img.youtube.com/vi/PROMO_VIDEO_ID/hqdefault.jpg'"
+                    >
+                    <div class="yt-play-btn" aria-hidden="true">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span class="yt-label">Watch Our Story</span>
+                </div>
+            </div>
+
+            <!-- ── Customer Review Videos ── -->
+            <div class="rv-header">
+                <h3>Customer Video Reviews</h3>
+                <!-- Replace YOUR_INSTAGRAM_HANDLE with your actual handle e.g. rcaterersandevents -->
+                <a href="https://www.instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="ig-follow-btn">
+                    <i class="fab fa-instagram"></i> Follow Us on Instagram
+                </a>
+            </div>
+
+            <div class="review-videos-grid">
+
+                <!-- Review Card 1 — replace REVIEW_1_ID with YouTube video ID -->
+                <div class="rv-card reveal" data-vid="REVIEW_1_ID">
+                    <div class="yt-lazy sm" data-vid="REVIEW_1_ID" role="button" tabindex="0" aria-label="Play customer review video">
+                        <img
+                            class="yt-thumb"
+                            src="https://img.youtube.com/vi/REVIEW_1_ID/hqdefault.jpg"
+                            alt="Customer review video 1"
+                            loading="lazy"
+                        >
+                        <div class="yt-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="rv-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Incredible food, flawless service at our wedding!"</p>
+                        <span>— Sarah &amp; Ahmed</span>
+                        <a href="https://www.instagram.com/p/INSTAGRAM_POST_ID_1/" target="_blank" rel="noopener" class="ig-post-link"><i class="fab fa-instagram"></i> View on Instagram</a>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 — replace REVIEW_2_ID with YouTube video ID -->
+                <div class="rv-card reveal" data-vid="REVIEW_2_ID">
+                    <div class="yt-lazy sm" data-vid="REVIEW_2_ID" role="button" tabindex="0" aria-label="Play customer review video">
+                        <img
+                            class="yt-thumb"
+                            src="https://img.youtube.com/vi/REVIEW_2_ID/hqdefault.jpg"
+                            alt="Customer review video 2"
+                            loading="lazy"
+                        >
+                        <div class="yt-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="rv-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"Best corporate event catering we've ever had. Every guest was impressed!"</p>
+                        <span>— Mohammed K., TechCorp</span>
+                        <a href="https://www.instagram.com/p/INSTAGRAM_POST_ID_2/" target="_blank" rel="noopener" class="ig-post-link"><i class="fab fa-instagram"></i> View on Instagram</a>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 — replace REVIEW_3_ID with YouTube video ID -->
+                <div class="rv-card reveal" data-vid="REVIEW_3_ID">
+                    <div class="yt-lazy sm" data-vid="REVIEW_3_ID" role="button" tabindex="0" aria-label="Play customer review video">
+                        <img
+                            class="yt-thumb"
+                            src="https://img.youtube.com/vi/REVIEW_3_ID/hqdefault.jpg"
+                            alt="Customer review video 3"
+                            loading="lazy"
+                        >
+                        <div class="yt-play-btn" aria-hidden="true"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="rv-info">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p>"My daughter's birthday was perfect from start to finish. Highly recommend!"</p>
+                        <span>— Priya R.</span>
+                        <a href="https://www.instagram.com/p/INSTAGRAM_POST_ID_3/" target="_blank" rel="noopener" class="ig-post-link"><i class="fab fa-instagram"></i> View on Instagram</a>
+                    </div>
+                </div>
+
+            </div><!-- /review-videos-grid -->
+
+            <!-- Instagram CTA Banner -->
+            <div class="ig-cta-banner reveal">
+                <div class="ig-cta-text">
+                    <i class="fab fa-instagram"></i>
+                    <div>
+                        <strong>See more on Instagram</strong>
+                        <p>We post event highlights, behind-the-scenes, and customer reviews regularly.</p>
+                    </div>
+                </div>
+                <a href="https://www.instagram.com/YOUR_INSTAGRAM_HANDLE" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i class="fab fa-instagram"></i> Follow @rcaterersandevents
+                </a>
+            </div>
+        </div>
+
+        <!-- Video Modal -->
+        <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-label="Video player">
+            <button class="vm-close" id="vm-close" aria-label="Close video"><i class="fas fa-times"></i></button>
+            <div class="vm-inner">
+                <div class="vm-frame-wrap">
+                    <iframe id="vm-iframe" src="" title="Video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section how-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Simple Process</span>
+                <h2>How It Works</h2>
+                <p>From enquiry to event day — we make it effortless.</p>
+            </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-num">01</div>
+                    <div class="step-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Get in Touch</h3>
+                    <p>Fill out our enquiry form or call us. Tell us your event type, date, guest count, and any special requirements.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step reveal">
+                    <div class="step-num">02</div>
+                    <div class="step-icon"><i class="fas fa-clipboard-list"></i></div>
+                    <h3>We Plan Together</h3>
+                    <p>Our team creates a tailored proposal with menu options, staffing plan, and setup details — customised to your vision and budget.</p>
+                </div>
+                <div class="step-line"></div>
+                <div class="step reveal">
+                    <div class="step-num">03</div>
+                    <div class="step-icon"><i class="fas fa-utensils"></i></div>
+                    <h3>We Deliver &amp; Serve</h3>
+                    <p>On the day, our team arrives early, sets up beautifully, and serves with care — so you can relax and enjoy every moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow">Let's Talk</span>
+                <h2>Book Your Event</h2>
+                <p>Ready to create something unforgettable? Get in touch today.</p>
+            </div>
+            <div class="contact-wrap">
+                <div class="contact-info reveal">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div><strong>Call Us</strong><p>+44 7700 000000</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div><strong>Email Us</strong><p>hello@rcaterersandevents.com</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><strong>Location</strong><p>123 Event Lane, London, UK</p></div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div><strong>Working Hours</strong><p>Mon – Sat: 9am – 8pm</p></div>
+                    </div>
+                    <div class="social-row">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <!-- data-service and data-template: fill in from your EmailJS dashboard -->
+                <form class="contact-form reveal" id="contact-form" novalidate
+                      data-service="service_8s6jiod"
+                      data-template="template_3e45n8p">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+44 7700 000000">
+                        </div>
+                        <div class="form-group">
+                            <label for="event-type">Event Type *</label>
+                            <select id="event-type" name="event-type" required>
+                                <option value="">Select event type…</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="religious">Religious Gathering</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="event-date">Event Date *</label>
+                            <input type="date" id="event-date" name="event-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Number of Guests *</label>
+                            <select id="guests" name="guests" required>
+                                <option value="">Select guest count…</option>
+                                <option value="1-25">1 – 25</option>
+                                <option value="26-50">26 – 50</option>
+                                <option value="51-100">51 – 100</option>
+                                <option value="101-200">101 – 200</option>
+                                <option value="201-500">201 – 500</option>
+                                <option value="500+">500+</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your vision, dietary requirements, venue, or any special requests…"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Send Enquiry
+                    </button>
+                    <div class="form-success" id="form-success" aria-live="polite">
+                        <i class="fas fa-check-circle"></i>
+                        <p>Thank you! We'll be in touch within 24 hours.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <span class="logo-r">R</span>
+                        <span class="logo-text">Caterers <span class="amp">&amp;</span> Events</span>
+                    </a>
+                    <p>Making every moment memorable with exceptional food, flawless service, and unforgettable experiences since 2010.</p>
+                    <div class="social-row">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Wedding Catering</a></li>
+                        <li><a href="#services">Corporate Events</a></li>
+                        <li><a href="#services">Private Parties</a></li>
+                        <li><a href="#services">Social Gatherings</a></li>
+                        <li><a href="#menu">View Menu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone-alt"></i> +44 7700 000000</li>
+                        <li><i class="fas fa-envelope"></i> hello@rcaterersandevents.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Event Lane, London, UK</li>
+                        <li><i class="fas fa-clock"></i> Mon – Sat: 9am – 8pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 R Caterers &amp; Events. All rights reserved.</p>
+                <p>Crafted with <i class="fas fa-heart"></i> for unforgettable events.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-top" id="back-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
